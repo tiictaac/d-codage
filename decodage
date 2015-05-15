@@ -1,0 +1,41 @@
+
+
+Copyright 2015, 2015 jihane kalai
+
+This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>. 1
+
+
+action = raw_input("Si vous voulez coder un texte, taper '1' & si vous avez un texte à décoder taper '2' ")  # l'utilisateur choisis si il souhaite coder ou décoder un message
+liste = []
+
+if action == '1':
+    
+    texte = raw_input('Quelle est ta phrase à coder ? ')
+    for car in texte:
+            liste.extend(chr(ord(car)+17))
+    chaine = ''.join(liste)
+    print chaine
+    
+
+elif action == '2':
+
+    texte = raw_input('Quelle est ta phrase à décoder ? ')
+    for car in texte:
+           liste.extend(chr(ord(car)-17))
+    chaine = ''.join(liste)
+    print chaine
+    
+
+else :
+    print "ahahaha t'es pas marrant"
